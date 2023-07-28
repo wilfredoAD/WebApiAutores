@@ -28,22 +28,7 @@ namespace ApiNew.Controllers
             await context.SaveChangesAsync();
             return Ok();
         
-        }
-        //[HttpPut("id:Guid")]
-        //public async Task<ActionResult> Put(Autor autor, Guid id)
-        //{
-
-        //    if (autor.Id != id)
-        //    {
-        //        return BadRequest("El id del Autor no esixte");
-        //    }
-
-        //    var existe = await context.Autors.AnyAsync(x=>x.Id == id);
-        //    context.Update(autor);
-        //    await context.SaveChangesAsync();
-        //    return Ok();
-
-        //}
+        }    
 
         [HttpPut("{id:Guid}")]
         public async Task<ActionResult> Put(Autor autor, Guid id)
